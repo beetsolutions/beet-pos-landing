@@ -1,12 +1,10 @@
 "use client"
-import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
 import HardwareSlider from "@/components/HardwareSlider";
 import { FAQ } from "@/components/FAQ";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Hardware categories data
@@ -72,9 +70,6 @@ const hardwareBenefits = [
 ];
 
 export default function HardwarePage() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-
   return (
     <>
       {/* Hero Section */}

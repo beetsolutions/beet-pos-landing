@@ -53,7 +53,7 @@ export function FAQ() {
     return (
         <section
             ref={sectionRef}
-            className="relative bg-primary/15"
+            className="relative bg-primary/15 dark:bg-gray-700"
             id="faq"
         >
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md'>
@@ -75,7 +75,7 @@ export function FAQ() {
                         transition={{duration: 0.7, delay: 0.2}}
                         className="text-3xl md:text-4xl font-bold tracking-tight mb-3"
                     >
-                       <span className="text-3xl lg:text-5xl font-semibold text-black ">
+                       <span className="text-3xl lg:text-5xl font-semibold text-black dark:text-white">
                           Questions & Answers
                         </span>
                     </motion.h2>
@@ -96,18 +96,18 @@ export function FAQ() {
                             >
                                 <AccordionItem
                                     value={`item-${index}`}
-                                    className="border border-gray-200/50 rounded-lg bg-white/40 backdrop-blur-sm hover:bg-white/60 transition-all duration-200 hover:shadow-sm hover:border-purple-200/50 px-4 py-1"
+                                    className="border border-gray-200/50 dark:border-gray-600/50 rounded-lg bg-white/40 dark:bg-gray-800/40 backdrop-blur-sm hover:bg-white/60 dark:hover:bg-gray-800/60 transition-all duration-200 hover:shadow-sm hover:border-purple-200/50 dark:hover:border-purple-500/50 px-4 py-1"
                                 >
                                     <AccordionTrigger
-                                        className="text-left hover:no-underline group-hover:text-purple-700 transition-colors duration-200 py-4 text-sm md:text-base font-medium">
+                                        className="text-left hover:no-underline group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors duration-200 py-4 text-sm md:text-base font-medium dark:text-white">
                   <span className="flex items-start gap-2">
                     <Sparkles
-                        className="w-4 h-4 text-purple-600 mt-0.5 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity duration-200"/>
+                        className="w-4 h-4 text-purple-600 dark:text-purple-400 mt-0.5 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity duration-200"/>
                       {item.question}
                   </span>
                                     </AccordionTrigger>
                                     <AccordionContent
-                                        className="text-muted-foreground leading-relaxed pb-4 pl-6 text-sm">
+                                        className="text-muted-foreground dark:text-gray-300 leading-relaxed pb-4 pl-6 text-sm">
                                         {item.answer}
                                     </AccordionContent>
                                 </AccordionItem>

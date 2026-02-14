@@ -28,10 +28,10 @@ export function getCookie(name: string): string | null {
   const nameEQ = `${name}=`;
   const cookies = document.cookie.split(';');
   
-  for (let cookie of cookies) {
-    cookie = cookie.trim();
-    if (cookie.indexOf(nameEQ) === 0) {
-      return cookie.substring(nameEQ.length);
+  for (const cookie of cookies) {
+    const trimmedCookie = cookie.trim();
+    if (trimmedCookie.indexOf(nameEQ) === 0) {
+      return trimmedCookie.substring(nameEQ.length);
     }
   }
   return null;

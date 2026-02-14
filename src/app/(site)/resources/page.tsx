@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Newsletter from "@/components/Home/Newsletter";
 import { Icon } from "@iconify/react";
+import {Metadata} from "next";
 
 type ResourceCategory = "all" | "guides" | "case-studies" | "blog" | "videos";
 
@@ -120,12 +121,13 @@ const categories = [
 ];
 
 const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', { 
-        month: 'short', 
-        day: 'numeric', 
-        year: 'numeric' 
+    return new Date(dateString).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
     });
-import { Metadata } from "next";
+}
+
 export const metadata: Metadata = {
     title: "Resources",
     description: "Helpful resources, guides, and tools to get the most out of your BEET POS system. Access training materials, video tutorials, and best practices.",

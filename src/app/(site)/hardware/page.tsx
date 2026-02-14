@@ -85,7 +85,7 @@ export default function HardwarePage() {
               <div className="flex lg:justify-start justify-center mb-6">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-600/10 to-indigo-600/10 border border-violet-600/20 backdrop-blur-sm">
                   <span className="text-sm font-medium bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-                    <span aria-hidden="true">🖥️</span> Premium Hardware
+                    <span aria-hidden="true">🖥️</span> <span className="sr-only">Category:</span>Premium Hardware
                   </span>
                 </div>
               </div>
@@ -144,7 +144,9 @@ export default function HardwarePage() {
                 key={i}
                 className="p-8 rounded-3xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="text-4xl mb-4">{benefit.icon}</div>
+                <div className="text-4xl mb-4" role="img" aria-label={benefit.title}>
+                  {benefit.icon}
+                </div>
                 <h3 className="text-xl text-black dark:text-white font-semibold mb-3">
                   {benefit.title}
                 </h3>
@@ -176,10 +178,7 @@ export default function HardwarePage() {
             {hardwareCategories.map((category, index) => (
               <div
                 key={index}
-                className={cn(
-                  "grid grid-cols-1 lg:grid-cols-12 gap-8 items-center",
-                  index % 2 === 1 && "lg:flex-row-reverse"
-                )}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
               >
                 <div className={cn("col-span-6", index % 2 === 1 && "lg:order-2")}>
                   <div className="relative">

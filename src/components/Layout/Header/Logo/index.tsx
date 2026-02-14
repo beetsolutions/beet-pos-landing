@@ -12,6 +12,7 @@ const Logo: React.FC = () => {
         height={0}
         style={{ width: '140px', height: '40px' }}
         quality={100}
+        className="dark:invert"
       />
 
     </Link>

@@ -47,7 +47,7 @@ const Footer: FC = () => {
             <ul>
               <li className="pb-5">
                 <Link
-                  href="#"
+                  href="/business-types/convenience"
                   className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
                 >
                   Convenience

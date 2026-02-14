@@ -42,9 +42,9 @@ const HardwareSlider = () => {
         <section className="bg-primary/15">
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md'>
                 <Slider {...settings}>
-                    {HardwareData.map((items, i) => (
+                    {HardwareData.map((items) => (
 
-                        <div className="bg-amber-400 container rounded-3xl mx-auto lg:max-w-screen-xl md:max-w-screen-md">
+                        <div key={items.profession} className="bg-amber-400 container rounded-3xl mx-auto lg:max-w-screen-xl md:max-w-screen-md">
 
                             <div className='grid grid-cols-1 lg:grid-cols-12 my-16 space-x-5 ml-5 mr-0'>
 

@@ -3,7 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Inventory Management",
+    description: "Take control of your inventory with BEET POS. Real-time tracking, automated ordering, low stock alerts, and comprehensive reporting to reduce waste and maximize profits.",
+    openGraph: {
+        title: "Inventory Management - BEET POS",
+        description: "Real-time inventory tracking, automated ordering, and powerful reporting to reduce waste and maximize profits.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

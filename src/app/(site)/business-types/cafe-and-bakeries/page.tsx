@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Cafe and Bakery POS System | BEET POS",
     description: "Streamline your cafe and bakery operations with BEET POS. Table management, online ordering, inventory tracking, and powerful reporting for cafes and bakeries.",
+    openGraph: {
+        title: "Cafe and Bakery POS System - BEET POS",
+        description: "Streamline your cafe and bakery with table management, online ordering, and inventory tracking.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const CafeAndBakeriesPage = () => {

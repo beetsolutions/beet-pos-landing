@@ -7,7 +7,13 @@ import {PricingSection} from "@/app/(site)/pricing/PricingSection";
 import {FAQ} from "@/components/FAQ";
 
 export const metadata: Metadata = {
-    title: "Pricing ",
+    title: "Pricing",
+    description: "Transparent pricing with no upfront costs or hidden fees. See what BEET POS costs and choose the plan that works for your business. No surprises, just honest pricing.",
+    openGraph: {
+        title: "BEET POS Pricing - Transparent & Affordable",
+        description: "Transparent pricing with no upfront costs or hidden fees. Choose the plan that works for your business.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const PricingPage = () => {

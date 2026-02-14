@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Gift Cards",
+    description: "Boost revenue and customer loyalty with BEET POS gift card system. Easy to manage, track gift card balances, and drive new customer acquisition.",
+    openGraph: {
+        title: "Gift Cards - BEET POS",
+        description: "Boost revenue and customer loyalty with integrated gift card management.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

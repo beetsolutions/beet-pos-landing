@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Self-Service Kiosk",
+    description: "Empower your customers with BEET POS self-service kiosks. Reduce wait times, increase order accuracy, and boost sales with intuitive ordering technology.",
+    openGraph: {
+        title: "Self-Service Kiosk - BEET POS",
+        description: "Reduce wait times and increase order accuracy with BEET POS self-service kiosks.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

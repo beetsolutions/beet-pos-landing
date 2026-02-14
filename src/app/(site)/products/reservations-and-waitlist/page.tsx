@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Reservations & Waitlist",
+    description: "Manage reservations and waitlists seamlessly with BEET POS. Optimize table turnover, reduce wait times, and deliver better customer experiences.",
+    openGraph: {
+        title: "Reservations & Waitlist - BEET POS",
+        description: "Manage reservations and waitlists seamlessly. Optimize table turnover and reduce wait times.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

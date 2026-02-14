@@ -12,13 +12,6 @@ export default function Error({
   useEffect(() => {
     // Log the error to console for debugging
     console.error('App error:', error);
-
-    // Check if it's a ChunkLoadError
-    if (error.name === 'ChunkLoadError' || error.message.includes('Loading chunk')) {
-      // Automatically reload the page once to fetch the latest chunks
-      console.log('ChunkLoadError detected, reloading page...');
-      window.location.reload();
-    }
   }, [error]);
 
   return (

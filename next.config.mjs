@@ -1,11 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Generate unique build IDs to help with cache busting
-  generateBuildId: async () => {
-    // Use timestamp to ensure unique builds
-    return `build-${Date.now()}`;
-  },
-  
   // Add headers to help with caching
   async headers() {
     return [

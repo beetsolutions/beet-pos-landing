@@ -1,6 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
 
+// Declare global Trustpilot type
+declare global {
+  interface Window {
+    Trustpilot?: {
+      loadFromElement: (element: HTMLElement | null, reload: boolean) => void;
+    };
+  }
+}
+
 interface TrustpilotProps {
   templateId?: string;
   businessUnitId?: string;
@@ -13,7 +22,7 @@ interface TrustpilotProps {
 
 const Trustpilot = ({
   templateId = "5419b6a8b0d04a076446a9ad", // Default: Mini template
-  businessUnitId = "YOUR_BUSINESS_UNIT_ID", // This needs to be configured
+  businessUnitId = process.env.NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID,
   height = "24px",
   width = "100%",
   theme = "light",
@@ -24,8 +33,8 @@ const Trustpilot = ({
 
   useEffect(() => {
     // Load Trustpilot widget script
-    if (typeof window !== "undefined" && (window as any).Trustpilot) {
-      (window as any).Trustpilot.loadFromElement(ref.current, true);
+    if (typeof window !== "undefined" && window.Trustpilot) {
+      window.Trustpilot.loadFromElement(ref.current, true);
     }
   }, []);
 
@@ -41,13 +50,15 @@ const Trustpilot = ({
       data-theme={theme}
       data-stars={stars}
     >
-      <a
-        href={`https://www.trustpilot.com/review/beetpos.com`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Trustpilot
-      </a>
+      {businessUnitId ? (
+        <a
+          href={`https://www.trustpilot.com/review/beetpos.com`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Trustpilot
+        </a>
+      ) : null}
     </div>
   );
 };

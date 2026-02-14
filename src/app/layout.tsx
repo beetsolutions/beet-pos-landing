@@ -68,7 +68,7 @@ export default function RootLayout({
       <head>
         <script
           type="text/javascript"
-          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
           async
         ></script>
       </head>

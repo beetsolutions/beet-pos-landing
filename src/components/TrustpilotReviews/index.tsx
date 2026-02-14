@@ -1,19 +1,30 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
+
+// Declare global Trustpilot type
+declare global {
+  interface Window {
+    Trustpilot?: {
+      loadFromElement: (element: HTMLElement | null, reload: boolean) => void;
+    };
+  }
+}
 
 interface TrustpilotReviewsProps {
   businessUnitId?: string;
 }
 
 const TrustpilotReviews = ({
-  businessUnitId = process.env.NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID || "YOUR_BUSINESS_UNIT_ID",
+  businessUnitId = process.env.NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID,
 }: TrustpilotReviewsProps) => {
   const ref = useRef<HTMLDivElement>(null);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     // Load Trustpilot widget script
-    if (typeof window !== "undefined" && (window as any).Trustpilot) {
-      (window as any).Trustpilot.loadFromElement(ref.current, true);
+    if (typeof window !== "undefined" && window.Trustpilot) {
+      window.Trustpilot.loadFromElement(ref.current, true);
     }
   }, []);
 
@@ -29,28 +40,29 @@ const TrustpilotReviews = ({
           </p>
         </div>
         
-        {/* Trustpilot Carousel Widget */}
-        <div
-          ref={ref}
-          className="trustpilot-widget"
-          data-locale="en-GB"
-          data-template-id="54ad5defc6454f065c28af8b"
-          data-businessunit-id={businessUnitId}
-          data-style-height="240px"
-          data-style-width="100%"
-          data-theme="light"
-          data-stars="1,2,3,4,5"
-          data-review-languages="en"
-        >
-          <a
-            href="https://www.trustpilot.com/review/beetpos.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
+        {businessUnitId && (
+          <div
+            ref={ref}
+            className="trustpilot-widget"
+            data-locale="en-GB"
+            data-template-id="54ad5defc6454f065c28af8b"
+            data-businessunit-id={businessUnitId}
+            data-style-height="240px"
+            data-style-width="100%"
+            data-theme={resolvedTheme === "dark" ? "dark" : "light"}
+            data-stars="1,2,3,4,5"
+            data-review-languages="en"
           >
-            Trustpilot
-          </a>
-        </div>
+            <a
+              href="https://www.trustpilot.com/review/beetpos.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Trustpilot
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

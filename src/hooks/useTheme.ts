@@ -25,9 +25,12 @@ export function useTheme() {
   // or fall back to the theme value if resolvedTheme is not available
   // During SSR/initial mount, default to 'light' to avoid hydration issues
   const currentTheme = mounted ? (resolvedTheme || theme || 'light') : 'light';
+  
+  // Ensure we only return 'light' or 'dark' (never 'system')
+  const normalizedTheme = currentTheme === 'dark' ? 'dark' : 'light';
 
   return {
-    theme: currentTheme as 'light' | 'dark',
+    theme: normalizedTheme as 'light' | 'dark',
     setTheme,
     systemTheme: mounted ? systemTheme : undefined,
   };

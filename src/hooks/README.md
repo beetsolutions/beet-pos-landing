@@ -9,7 +9,7 @@ The hook is already set up in this project and is located at `src/hooks/useTheme
 ## Usage
 
 ```tsx
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks';
 
 function MyComponent() {
   const { theme, setTheme, systemTheme } = useTheme();
@@ -44,7 +44,7 @@ This hook wraps the `useTheme` hook from the `next-themes` library and provides 
 ### Simple Theme Display
 
 ```tsx
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks';
 
 function ThemeDisplay() {
   const { theme } = useTheme();
@@ -56,7 +56,7 @@ function ThemeDisplay() {
 ### Theme Toggler Button
 
 ```tsx
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks';
 
 function ThemeToggler() {
   const { theme, setTheme } = useTheme();
@@ -72,7 +72,7 @@ function ThemeToggler() {
 ### Conditional Rendering Based on Theme
 
 ```tsx
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks';
 
 function ConditionalContent() {
   const { theme } = useTheme();

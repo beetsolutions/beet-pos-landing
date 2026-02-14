@@ -1,10 +1,8 @@
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { ThemeProvider } from "next-themes";
 import ScrollToTop from "@/components/ScrollToTop";
-const font = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], });
 
 export default function RootLayout({
   children,
@@ -13,7 +11,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${font.className}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-poppins">
         <ThemeProvider
           attribute="class"
           enableSystem={true}

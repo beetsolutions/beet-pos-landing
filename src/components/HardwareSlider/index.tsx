@@ -41,7 +41,7 @@ const HardwareSlider = () => {
     return (
         <section className="bg-primary/15" role="region" aria-label="Hardware products carousel">
             <div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md'>
-                {HardwareData?.length > 0 ? (
+                {HardwareData?.length ? (
                     <Slider {...settings}>
                         {HardwareData.map((items, index) => (
 

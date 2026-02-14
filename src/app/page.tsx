@@ -24,10 +24,10 @@ export default function Home() {
         <main>
             <Hero/>
             <Features/>
-            {/*/!*<Cook />*!/*/}
+            {/*<Cook />*/}
             <POS/>
             <HardwareSlider/>
-            {/*/!*<Expert/>*!/*/}
+            {/*<Expert/>*/}
             {/*<Gallery/>*/}
             <Empowerment/>
             <TrustpilotReviews/>

@@ -22,11 +22,16 @@ const TrustpilotReviews = ({
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    // Load Trustpilot widget script
-    if (typeof window !== "undefined" && window.Trustpilot) {
+    // Load Trustpilot widget script only if businessUnitId is available
+    if (typeof window !== "undefined" && window.Trustpilot && businessUnitId) {
       window.Trustpilot.loadFromElement(ref.current, true);
     }
-  }, []);
+  }, [businessUnitId]);
+
+  // Don't render section if no businessUnitId is provided
+  if (!businessUnitId) {
+    return null;
+  }
 
   return (
     <section className="py-16 bg-white dark:bg-black">
@@ -40,29 +45,27 @@ const TrustpilotReviews = ({
           </p>
         </div>
         
-        {businessUnitId && (
-          <div
-            ref={ref}
-            className="trustpilot-widget"
-            data-locale="en-GB"
-            data-template-id="54ad5defc6454f065c28af8b"
-            data-businessunit-id={businessUnitId}
-            data-style-height="240px"
-            data-style-width="100%"
-            data-theme={resolvedTheme === "dark" ? "dark" : "light"}
-            data-stars="1,2,3,4,5"
-            data-review-languages="en"
+        <div
+          ref={ref}
+          className="trustpilot-widget"
+          data-locale="en-GB"
+          data-template-id="54ad5defc6454f065c28af8b"
+          data-businessunit-id={businessUnitId}
+          data-style-height="240px"
+          data-style-width="100%"
+          data-theme={resolvedTheme === "dark" ? "dark" : "light"}
+          data-stars="1,2,3,4,5"
+          data-review-languages="en"
+        >
+          <a
+            href="https://www.trustpilot.com/review/beetpos.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
           >
-            <a
-              href="https://www.trustpilot.com/review/beetpos.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              Trustpilot
-            </a>
-          </div>
-        )}
+            Trustpilot
+          </a>
+        </div>
       </div>
     </section>
   );

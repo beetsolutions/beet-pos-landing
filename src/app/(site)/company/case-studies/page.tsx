@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 const CaseStudiesPage = () => {
     const caseStudies = [
         {
+            id: "family-diner",
             title: "Family Diner Increases Revenue by 45%",
             industry: "Restaurant",
             image: "/images/hero/bakery.webp",
@@ -24,6 +25,7 @@ const CaseStudiesPage = () => {
             clientName: "Joe's Family Diner"
         },
         {
+            id: "bakery-chain",
             title: "Bakery Chain Scales to 15 Locations",
             industry: "Bakery",
             image: "/images/hero/bakery.webp",
@@ -37,6 +39,7 @@ const CaseStudiesPage = () => {
             clientName: "Sweet Treats Bakery"
         },
         {
+            id: "coffee-cafe",
             title: "Cafe Reduces Costs with Smart Inventory",
             industry: "Coffee Shop",
             image: "/images/cook/cook.jpg",
@@ -50,6 +53,7 @@ const CaseStudiesPage = () => {
             clientName: "Daily Grind Cafe"
         },
         {
+            id: "fast-casual",
             title: "Fast Casual Restaurant Streamlines Operations",
             industry: "Fast Casual",
             image: "/images/hero/kiosks.webp",
@@ -63,6 +67,7 @@ const CaseStudiesPage = () => {
             clientName: "Fresh Fusion Grill"
         },
         {
+            id: "food-truck",
             title: "Food Truck Fleet Optimizes Mobile Operations",
             industry: "Food Truck",
             image: "/images/hero/payments.webp",
@@ -76,6 +81,7 @@ const CaseStudiesPage = () => {
             clientName: "Urban Eats Food Trucks"
         },
         {
+            id: "pizzeria",
             title: "Pizzeria Boosts Online Orders by 200%",
             industry: "Pizza",
             image: "/images/hero/banner-image.jpg",
@@ -124,8 +130,8 @@ const CaseStudiesPage = () => {
                     </div>
 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                        {caseStudies.map((study, index) => (
-                            <div key={index} className='bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden border border-gray-200 dark:border-gray-600'>
+                        {caseStudies.map((study) => (
+                            <div key={study.id} className='bg-white dark:bg-gray-700 rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden border border-gray-200 dark:border-gray-600'>
                                 <div className='relative h-48 w-full'>
                                     <Image 
                                         src={study.image} 
@@ -163,8 +169,8 @@ const CaseStudiesPage = () => {
                                             Key Results:
                                         </p>
                                         <ul className='space-y-1'>
-                                            {study.results.map((result, idx) => (
-                                                <li key={idx} className='text-sm text-black/60 dark:text-white/60 flex items-start'>
+                                            {study.results.map((result) => (
+                                                <li key={result} className='text-sm text-black/60 dark:text-white/60 flex items-start'>
                                                     <span className='text-primary mr-2'>✓</span>
                                                     {result}
                                                 </li>

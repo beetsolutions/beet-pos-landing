@@ -3,6 +3,7 @@ import Link from "next/link";
 import {companyData, headerData} from "../Header/Navigation/menuData";
 import { Icon } from "@iconify/react";
 import LogoDark from "../Header/Logo";
+import Trustpilot from "@/components/Trustpilot";
 
 const Footer: FC = () => {
   return (
@@ -40,6 +41,14 @@ const Footer: FC = () => {
                   className=" group-hover:text-white text-black"
                 />
               </Link>
+            </div>
+            <div className="mt-8">
+              <Trustpilot
+                templateId="5419b6a8b0d04a076446a9ad"
+                height="24px"
+                width="100%"
+                theme="dark"
+              />
             </div>
           </div>
           <div className="">

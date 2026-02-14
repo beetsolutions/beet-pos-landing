@@ -1,5 +1,5 @@
 'use client'
-import { useTheme } from "@/hooks/useTheme";
+import { useTheme } from "@/hooks";
 
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();

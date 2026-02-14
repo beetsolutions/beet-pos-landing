@@ -100,8 +100,11 @@ export function PricingSection() {
                 🏪 For Retailers
               </span>
                 </div>
-                <p className="text-base text-gray-600 dark:text-gray-400 hover:text-violet-600 transition-colors duration-300 font-medium">
-                  Convenience • Grocery • Liquor • Smoke Shop
+                <p className="text-base text-gray-600 dark:text-gray-400 hover:text-violet-600 transition-colors duration-300 font-medium" role="text">
+                  Convenience<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Grocery<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Liquor<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Smoke Shop
                 </p>
               </div>
             </div>
@@ -191,8 +194,13 @@ export function PricingSection() {
                 🍽️ For Restaurants
               </span>
                 </div>
-                <p className="text-base text-gray-600 dark:text-gray-400 hover:text-pink-600 transition-colors duration-300 font-medium">
-                  Fast Food • Full Service • Fast Casual • Cafe & Bakery • Bar • Nightclub
+                <p className="text-base text-gray-600 dark:text-gray-400 hover:text-pink-600 transition-colors duration-300 font-medium" role="text">
+                  Fast Food<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Full Service<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Fast Casual<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Cafe & Bakery<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Bar<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Nightclub
                 </p>
               </div>
             </div>

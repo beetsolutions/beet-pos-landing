@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Point of Sale",
+    description: "Revolutionize your restaurant with BEET POS. Our modern point of sale system streamlines operations, enhances customer experience, and improves your bottom line.",
+    openGraph: {
+        title: "Point of Sale - BEET POS",
+        description: "Modern point of sale system designed to streamline your restaurant operations and enhance customer experience.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

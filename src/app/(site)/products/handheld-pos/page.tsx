@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Handheld POS",
+    description: "Take orders anywhere with BEET POS handheld devices. Perfect for table-side ordering, outdoor seating, and busy restaurants. Improve service speed and accuracy.",
+    openGraph: {
+        title: "Handheld POS - BEET POS",
+        description: "Take orders anywhere with handheld devices. Perfect for table-side ordering and busy restaurants.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

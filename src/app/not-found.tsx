@@ -3,7 +3,12 @@ import NotFound from "@/components/NotFound";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "404 Page | Venus ",
+  title: "Page Not Found - 404",
+  description: "The page you are looking for could not be found. Return to the BEET POS homepage to explore our point of sale solutions.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const ErrorPage = () => {

@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Loyalty & Rewards Program",
+    description: "Build customer loyalty with BEET POS integrated rewards program. Increase repeat visits, track customer preferences, and drive more revenue with powerful loyalty features.",
+    openGraph: {
+        title: "Loyalty & Rewards Program - BEET POS",
+        description: "Build customer loyalty and increase repeat visits with integrated rewards programs.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

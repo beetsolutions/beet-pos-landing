@@ -3,7 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "BEET Pay - Payment Processing",
+    description: "Accept all payment types with BEET Pay. Fast, secure payment processing with competitive rates. Support for cards, contactless, mobile payments, and more.",
+    openGraph: {
+        title: "BEET Pay - Payment Processing - BEET POS",
+        description: "Fast, secure payment processing with competitive rates. Accept all payment types.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

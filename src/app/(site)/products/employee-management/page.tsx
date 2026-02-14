@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Employee Management",
+    description: "Manage your team effectively with BEET POS. Track time & attendance, manage schedules, monitor performance, and streamline payroll with powerful employee management tools.",
+    openGraph: {
+        title: "Employee Management - BEET POS",
+        description: "Track time & attendance, manage schedules, and streamline payroll with powerful tools.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

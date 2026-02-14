@@ -5,7 +5,13 @@ import React from "react";
 import Newsletter from "@/components/Home/Newsletter";
 
 export const metadata: Metadata = {
-    title: "About Us ",
+    title: "About Us",
+    description: "Learn about BEET POS - our mission to revolutionize business operations with innovative point of sale technology. Discover our story, values, and commitment to your success.",
+    openGraph: {
+        title: "About Us - BEET POS",
+        description: "Learn about BEET POS and our mission to revolutionize business operations.",
+        images: ['/images/hero/hq.webp'],
+    },
 };
 
 const AboutPage = () => {

@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import ScrollToTop from "@/components/ScrollToTop";
 import ToasterContext from "./api/contex/ToasetContex";
 import CookieConsent from "@/components/CookieConsent";
+import ChunkErrorHandler from "@/components/ChunkErrorHandler";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -78,6 +79,7 @@ export default function RootLayout({
           enableSystem={true}
           defaultTheme="system"
         >
+          <ChunkErrorHandler />
           <ToasterContext />
           <Header />
           {children}

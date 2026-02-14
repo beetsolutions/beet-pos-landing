@@ -91,17 +91,20 @@ const tiersRestaurant: PricingTier[] = [
 export function PricingSection() {
   return (
       <>
-        <section className="pb-16 px-4 sm:px-6 lg:px-8 relative bg-primary/15">
-          <div className="max-w-7xl mx-auto  relative">
-            <div className="text-center mb-24">
-              <div className="flex flex-col items-center gap-3 mb-12 mt-2">
-                <div className="flex flex-col items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-violet-600/10 to-blue-600/10 border border-violet-600/20 shadow-lg shadow-violet-600/5">
+        <section className="pb-16 pt-8 px-4 sm:px-6 lg:px-8 relative bg-primary/15">
+          <div className="max-w-7xl mx-auto relative">
+            <div className="text-center mb-16">
+              <div className="flex flex-col items-center gap-4 mb-12 mt-2">
+                <div className="flex flex-col items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-violet-600/10 to-blue-600/10 border border-violet-600/20 shadow-lg shadow-violet-600/5 backdrop-blur-sm">
               <span className="text-sm font-medium bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
-                For Retailers
+                <span aria-hidden="true">🏪</span> For Retailers
               </span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-10 hover:text-violet-600 transition-colors duration-300">
-                  Convenience|Grocery|Liquor|Smoke Shop
+                <p className="text-base text-gray-600 dark:text-gray-400 hover:text-violet-600 transition-colors duration-300 font-medium">
+                  Convenience<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Grocery<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Liquor<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Smoke Shop
                 </p>
               </div>
             </div>
@@ -116,17 +119,20 @@ export function PricingSection() {
                       )}
                   >
                     {tier.popular && (
-                        <div className="absolute -top-10 left-0 right-0 mx-auto w-36 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 px-4 py-1.5 text-sm text-white text-center font-medium shadow-lg">
-                          Most popular
+                        <div className="absolute -top-12 left-0 right-0 mx-auto w-40 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2 text-sm text-white text-center font-semibold shadow-xl shadow-violet-600/30 motion-safe:animate-pulse">
+                          <span aria-hidden="true">⭐</span> Most popular
                         </div>
                     )}
 
-                    <div className="h-full rounded-2xl border border-white/40 bg-white/40 backdrop-blur-xl p-10 relative overflow-hidden group hover:shadow-2xl hover:shadow-violet-600/10 hover:-translate-y-1 transition-all duration-500">
+                    <div className="h-full rounded-2xl border border-white/40 bg-white/50 backdrop-blur-xl p-10 relative overflow-hidden group hover:shadow-2xl hover:shadow-violet-600/20 hover:-translate-y-2 transition-all duration-500 hover:border-violet-200/60">
                       <div className={cn(
-                          "absolute inset-0 bg-gradient-to-br opacity-[0.08] -z-10 transition-opacity duration-500",
+                          "absolute inset-0 bg-gradient-to-br opacity-[0.06] -z-10 transition-opacity duration-500",
                           tier.gradient,
-                          "group-hover:opacity-[0.12]"
+                          "group-hover:opacity-[0.15]"
                       )} />
+                      
+                      {/* Decorative Corner Element */}
+                      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-violet-500/10 to-transparent rounded-bl-3xl"></div>
 
                       <div className="mb-10">
                         <h3 className="text-2xl font-bold">{tier.name}</h3>
@@ -166,7 +172,12 @@ export function PricingSection() {
                         ))}
                       </ul>
 
-                      <Link href='#' className='text-xl w-full md:w-auto font-medium rounded-full text-white py-2 px-3 bg-primary hover:text-primary lg:px-14 mr-6 border border-primary hover:bg-transparent'>{tier.buttonText}</Link>
+                      <Link 
+                        href='#' 
+                        className='inline-flex items-center justify-center text-base font-semibold rounded-xl text-white py-3.5 px-8 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 shadow-lg shadow-violet-600/25 hover:shadow-xl hover:shadow-violet-600/40 transition-all duration-300 hover:-translate-y-0.5 w-full'
+                      >
+                        {tier.buttonText}
+                      </Link>
                     </div>
                   </div>
               ))}
@@ -174,17 +185,22 @@ export function PricingSection() {
           </div>
         </section>
 
-        <section className="pb-16 px-4 sm:px-6 lg:px-8 relative bg-yellow-400">
+        <section className="pb-16 pt-8 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-br from-pink-50 via-rose-50 to-orange-50 dark:from-gray-900 dark:via-pink-900/20 dark:to-gray-800">
           <div className="max-w-7xl mx-auto relative">
-            <div className="text-center mb-24">
-              <div className="flex flex-col items-center gap-3 mb-12 mt-2">
-                <div className="flex flex-col items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-violet-600/10 to-blue-600/10 border border-violet-600/20 shadow-lg shadow-violet-600/5">
-              <span className="text-sm font-medium bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
-                For Restaurants
+            <div className="text-center mb-16">
+              <div className="flex flex-col items-center gap-4 mb-12 mt-2">
+                <div className="flex flex-col items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-600/10 to-rose-600/10 border border-pink-600/20 shadow-lg shadow-pink-600/5 backdrop-blur-sm">
+              <span className="text-sm font-medium bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+                <span aria-hidden="true">🍽️</span> For Restaurants
               </span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-10 hover:text-violet-600 transition-colors duration-300">
-                  Fast Food|Full Service|Fast Casual|Cafe & Bakery|Bar|Nightclub
+                <p className="text-base text-gray-600 dark:text-gray-400 hover:text-pink-600 transition-colors duration-300 font-medium">
+                  Fast Food<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Full Service<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Fast Casual<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Cafe & Bakery<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Bar<span aria-hidden="true"> • </span><span className="sr-only">, </span>
+                  Nightclub
                 </p>
               </div>
             </div>
@@ -199,17 +215,20 @@ export function PricingSection() {
                       )}
                   >
                     {info.popular && (
-                        <div className="absolute -top-10 left-0 right-0 mx-auto w-36 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 px-4 py-1.5 text-sm text-white text-center font-medium shadow-lg">
-                          Most popular
+                        <div className="absolute -top-12 left-0 right-0 mx-auto w-40 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 px-4 py-2 text-sm text-white text-center font-semibold shadow-xl shadow-pink-600/30 motion-safe:animate-pulse">
+                          <span aria-hidden="true">⭐</span> Most popular
                         </div>
                     )}
 
-                    <div className="h-full rounded-2xl border border-white/40 bg-white/40 backdrop-blur-xl p-10 relative overflow-hidden group hover:shadow-2xl hover:shadow-violet-600/10 hover:-translate-y-1 transition-all duration-500">
+                    <div className="h-full rounded-2xl border border-white/40 bg-white/50 backdrop-blur-xl p-10 relative overflow-hidden group hover:shadow-2xl hover:shadow-pink-600/20 hover:-translate-y-2 transition-all duration-500 hover:border-pink-200/60">
                       <div className={cn(
-                          "absolute inset-0 bg-gradient-to-br opacity-[0.08] -z-10 transition-opacity duration-500",
+                          "absolute inset-0 bg-gradient-to-br opacity-[0.06] -z-10 transition-opacity duration-500",
                           info.gradient,
-                          "group-hover:opacity-[0.12]"
+                          "group-hover:opacity-[0.15]"
                       )} />
+                      
+                      {/* Decorative Corner Element */}
+                      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-500/10 to-transparent rounded-bl-3xl"></div>
 
                       <div className="mb-10">
                         <h3 className="text-2xl font-bold">{info.name}</h3>
@@ -249,7 +268,12 @@ export function PricingSection() {
                         ))}
                       </ul>
 
-                      <Link href='#' className='text-xl w-full md:w-auto font-medium rounded-full text-white py-2 px-3 bg-primary hover:text-primary lg:px-14 mr-6 border border-primary hover:bg-transparent'>{info.buttonText}</Link>
+                      <Link 
+                        href='#' 
+                        className='inline-flex items-center justify-center text-base font-semibold rounded-xl text-white py-3.5 px-8 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 shadow-lg shadow-pink-600/25 hover:shadow-xl hover:shadow-pink-600/40 transition-all duration-300 hover:-translate-y-0.5 w-full'
+                      >
+                        {info.buttonText}
+                      </Link>
                     </div>
                   </div>
               ))}

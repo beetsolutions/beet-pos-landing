@@ -15,6 +15,10 @@ const POS = () => {
         cafe: '/images/hero/bakery.webp'
     };
 
+    const getButtonClassName = (type: BusinessType) => {
+        return `flex w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary text-white ${selectedBusinessType === type ? 'bg-primary' : 'bg-primary/50'}`;
+    };
+
     return (
         <section className='relative' id="cook-section">
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md">
@@ -34,7 +38,7 @@ const POS = () => {
                         <div className="flex gap-4 py-2">
                             <button
                                 onClick={() => setSelectedBusinessType('smoke')}
-                                className={`flex grid-cols-2 w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary text-white ${selectedBusinessType === 'smoke' ? 'bg-primary' : 'bg-primary/50'}`}
+                                className={getButtonClassName('smoke')}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
@@ -54,7 +58,7 @@ const POS = () => {
 
                             <button
                                 onClick={() => setSelectedBusinessType('grocery')}
-                                className={`flex w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary text-white ${selectedBusinessType === 'grocery' ? 'bg-primary' : 'bg-primary/50'}`}
+                                className={getButtonClassName('grocery')}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
                                      fill="currentColor">
@@ -82,7 +86,7 @@ const POS = () => {
                         <div className="flex gap-4 py-2">
                             <button
                                 onClick={() => setSelectedBusinessType('liquor')}
-                                className={`flex grid-cols-2 w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary text-white ${selectedBusinessType === 'liquor' ? 'bg-primary' : 'bg-primary/50'}`}
+                                className={getButtonClassName('liquor')}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
@@ -111,7 +115,7 @@ const POS = () => {
 
                             <button
                                 onClick={() => setSelectedBusinessType('cafe')}
-                                className={`flex w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary text-white ${selectedBusinessType === 'cafe' ? 'bg-primary' : 'bg-primary/50'}`}
+                                className={getButtonClassName('cafe')}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"

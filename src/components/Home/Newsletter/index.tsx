@@ -1,8 +1,49 @@
 "use client"
+import { useState } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import toast from "react-hot-toast";
+import Loader from "@/components/Common/Loader";
+
+const MOCK_API_DELAY = 1500;
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const Newsletter = () => {
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+
+    const validateEmail = (email: string) => {
+        return EMAIL_REGEX.test(email);
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!email) {
+            toast.error("Please enter your email address.");
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            toast.error("Please enter a valid email address.");
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            // Simulate API call - replace with actual API endpoint when available
+            await new Promise((resolve) => setTimeout(resolve, MOCK_API_DELAY));
+            
+            toast.success("Thank you for subscribing to our newsletter!");
+            setEmail("");
+        } catch (error) {
+            toast.error("Something went wrong. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <section className='relative'>
             <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md ">
@@ -14,21 +55,38 @@ const Newsletter = () => {
                                 Subscribe our <br /> newsletter.
                             </h2>
 
-                            <div>
+                            <form onSubmit={handleSubmit}>
                                 <div className="relative text-white focus-within:text-white flex flex-row-reverse shadow-fi rounded-full">
-                                    <input type="Email address" name="q" className="py-6 sm:py-8 text-sm w-full text-black dark:text-white rounded-full pl-4 par-87 focus:outline-none focus:text-black" placeholder="@ enter your email-address" autoComplete="off" />
+                                    <input 
+                                        type="email" 
+                                        name="email" 
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        className="py-6 sm:py-8 text-sm w-full text-black dark:text-white rounded-full pl-4 par-87 focus:outline-none focus:text-black" 
+                                        placeholder="@ enter your email-address" 
+                                        autoComplete="off"
+                                        disabled={loading}
+                                    />
                                     <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-                                        <button type="submit" className="p-2 bg-gray-900 hover:scale-110 duration-300 rounded-full">
-                                            <Icon
-                                                icon="tabler:arrow-narrow-right"
-                                                width="32"
-                                                height="32"
-                                                className="text-white "
-                                            />
+                                        <button 
+                                            type="submit" 
+                                            className="p-2 bg-gray-900 hover:scale-110 duration-300 rounded-full disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+                                            disabled={loading}
+                                        >
+                                            {loading ? (
+                                                <Loader />
+                                            ) : (
+                                                <Icon
+                                                    icon="tabler:arrow-narrow-right"
+                                                    width="32"
+                                                    height="32"
+                                                    className="text-white "
+                                                />
+                                            )}
                                         </button>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     {/*<div className="col-span-4 relative hidden md:block">*/}

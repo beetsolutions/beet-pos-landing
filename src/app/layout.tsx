@@ -65,6 +65,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="text/javascript"
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          async
+        ></script>
+      </head>
       <body className="font-poppins" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"

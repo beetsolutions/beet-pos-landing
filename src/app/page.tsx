@@ -7,6 +7,7 @@ import POS from "@/components/POS";
 import HardwareSlider from "@/components/HardwareSlider";
 import {FAQ} from "@/components/FAQ";
 import Empowerment from "@/components/Empowerment";
+import TrustpilotReviews from "@/components/TrustpilotReviews";
 
 export const metadata: Metadata = {
     title: "Home",
@@ -29,6 +30,7 @@ export default function Home() {
             {/*/!*<Expert/>*!/*/}
             {/*<Gallery/>*/}
             <Empowerment/>
+            <TrustpilotReviews/>
             <Newsletter/>
             <FAQ/>
         </main>

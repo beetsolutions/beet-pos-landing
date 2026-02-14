@@ -103,7 +103,7 @@ const Footer: FC = () => {
               </li>
               <li className="pb-5">
                 <Link
-                    href="#"
+                    href="/business-types/bars"
                     className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
                 >
                   Bars

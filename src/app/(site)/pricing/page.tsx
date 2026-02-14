@@ -32,7 +32,7 @@ const PricingPage = () => {
 
                             <h1 className="text-3xl lg:text-6xl font-bold mb-5 text-black dark:text-white text-center leading-tight">
                                 Powerful POS doesn't have to<br className="hidden lg:block" />
-                                <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent [text-shadow:_0_0_1px_rgb(96_75_232_/_30%)]"> break the bank</span>
+                                <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent font-extrabold"> break the bank</span>
                             </h1>
                             <p className='text-gray-600 dark:text-gray-300 lg:text-xl font-normal mb-10 text-center max-w-2xl mx-auto'>
                                 What you see, is what you pay. Transparent pricing with

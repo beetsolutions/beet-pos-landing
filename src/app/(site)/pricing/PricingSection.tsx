@@ -119,8 +119,8 @@ export function PricingSection() {
                       )}
                   >
                     {tier.popular && (
-                        <div className="absolute -top-12 left-0 right-0 mx-auto w-40 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2 text-sm text-white text-center font-semibold shadow-xl shadow-violet-600/30 motion-safe:animate-pulse">
-                          ⭐ Most popular
+                        <div className="absolute -top-12 left-0 right-0 mx-auto w-40 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-4 py-2 text-sm text-white text-center font-semibold shadow-xl shadow-violet-600/30 motion-safe:animate-pulse" aria-label="Most popular">
+                          <span aria-hidden="true">⭐</span> Most popular
                         </div>
                     )}
 
@@ -215,8 +215,8 @@ export function PricingSection() {
                       )}
                   >
                     {info.popular && (
-                        <div className="absolute -top-12 left-0 right-0 mx-auto w-40 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 px-4 py-2 text-sm text-white text-center font-semibold shadow-xl shadow-pink-600/30 motion-safe:animate-pulse">
-                          ⭐ Most popular
+                        <div className="absolute -top-12 left-0 right-0 mx-auto w-40 rounded-full bg-gradient-to-r from-pink-600 to-rose-600 px-4 py-2 text-sm text-white text-center font-semibold shadow-xl shadow-pink-600/30 motion-safe:animate-pulse" aria-label="Most popular">
+                          <span aria-hidden="true">⭐</span> Most popular
                         </div>
                     )}
 

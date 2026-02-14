@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Email Marketing",
+    description: "Drive customer engagement with BEET POS integrated email marketing. Send targeted campaigns, automate promotions, and increase repeat business with powerful marketing tools.",
+    openGraph: {
+        title: "Email Marketing - BEET POS",
+        description: "Drive customer engagement with integrated email marketing and automated promotions.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

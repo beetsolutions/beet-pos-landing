@@ -5,6 +5,13 @@ import React from "react";
 import Newsletter from "@/components/Home/Newsletter";
 
 export const metadata: Metadata = {
+    title: "Case Studies",
+    description: "Read real success stories from businesses using BEET POS. Discover how restaurants, bars, and retail stores have transformed their operations and increased profitability.",
+    openGraph: {
+        title: "Case Studies - BEET POS",
+        description: "Real success stories from businesses using BEET POS to transform their operations.",
+        images: ['/images/hero/hq.webp'],
+    },
     title: "Case Studies - Success Stories",
 };
 

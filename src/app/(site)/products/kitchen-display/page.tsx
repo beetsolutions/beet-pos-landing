@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Kitchen Display System",
+    description: "Streamline your kitchen operations with BEET POS Kitchen Display System. Real-time order management, reduce errors, improve communication, and speed up service.",
+    openGraph: {
+        title: "Kitchen Display System - BEET POS",
+        description: "Streamline kitchen operations with real-time order management and improved communication.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Full Service Restaurant POS System | BEET POS",
     description: "Transform your full-service restaurant with BEET POS. Table management, order tracking, kitchen display, and seamless service for fine dining.",
+    openGraph: {
+        title: "Full Service Restaurant POS System - BEET POS",
+        description: "Table management, order tracking, kitchen display, and seamless service for fine dining.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const FullServicePage = () => {

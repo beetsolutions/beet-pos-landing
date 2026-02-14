@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Fast Food Restaurant POS System | BEET POS",
     description: "Optimize your fast food restaurant operations with BEET POS. Fast order processing, kitchen management, and seamless service for quick-service restaurants.",
+    openGraph: {
+        title: "Fast Food Restaurant POS System - BEET POS",
+        description: "Fast order processing, kitchen management, and seamless service for quick-service restaurants.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const FastFoodPage = () => {

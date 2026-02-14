@@ -4,7 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Products ",
+    title: "Multi-Location Management",
+    description: "Manage multiple locations from one platform with BEET POS. Centralized reporting, inventory management, and employee oversight across all your business locations.",
+    openGraph: {
+        title: "Multi-Location Management - BEET POS",
+        description: "Manage multiple locations from one platform with centralized reporting and oversight.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ProductsPage = () => {

@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Nightclub POS System | BEET POS",
     description: "Elevate your nightclub operations with BEET POS. Fast service, advanced tab management, and real-time insights for nightclubs and late-night venues.",
+    openGraph: {
+        title: "Nightclub POS System - BEET POS",
+        description: "Fast service, advanced tab management, and real-time insights for nightclubs.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const NightclubsPage = () => {

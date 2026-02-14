@@ -6,6 +6,12 @@ import Newsletter from "@/components/Home/Newsletter";
 
 export const metadata: Metadata = {
     title: "Careers - Join Our Team",
+    description: "Join the BEET POS team and help us transform how businesses operate. Explore career opportunities and be part of building the future of point of sale technology.",
+    openGraph: {
+        title: "Careers - Join Our Team - BEET POS",
+        description: "Explore career opportunities at BEET POS and help us build the future of POS technology.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const CareersPage = () => {

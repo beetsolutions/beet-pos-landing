@@ -212,13 +212,13 @@ const Footer: FC = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-grey/15 dark:border-white/15 py-10 flex justify-between items-center">
-            <p className="sm:col-span-3 sm:pr-6 text-sm text-white/70 dark:text-white/70">
+        <div className="border-t border-grey/15 dark:border-white/15 py-10 flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-0">
+            <p className="text-sm text-white/70 dark:text-white/70 text-center sm:text-left">
               Copyright © 2026 - BEET POS LTD.
             </p>
-            <div className="">
-              <Link href="#" className="text-sm text-white/70 dark:text-white/70 px-5 border-r border-grey/15 dark:border-white/15 hover:text-primary dark:hover:text-primary">Privacy policy</Link>
-              <Link href="#" className="text-sm text-white/70 dark:text-white/70 px-5 hover:text-primary dark:hover:text-primary">Terms & conditions</Link>
+            <div className="flex flex-wrap justify-center sm:justify-end gap-2">
+              <Link href="#" className="text-sm text-white/70 dark:text-white/70 px-3 sm:px-5 border-r border-grey/15 dark:border-white/15 hover:text-primary dark:hover:text-primary">Privacy policy</Link>
+              <Link href="#" className="text-sm text-white/70 dark:text-white/70 px-3 sm:px-5 hover:text-primary dark:hover:text-primary">Terms & conditions</Link>
             </div>
           </div>
       </div>

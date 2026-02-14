@@ -70,7 +70,8 @@ const HardwareSlider = () => {
                                             alt={`${items.profession} product image`}
                                             width={636} 
                                             height={808}
-                                            loading="lazy"
+                                            loading={index === 0 ? "eager" : "lazy"}
+                                            priority={index === 0}
                                         />
                                     </div>
                                 </div>

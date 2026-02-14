@@ -213,7 +213,7 @@ const IntegrationsPage = () => {
                                 <Icon icon="tabler:arrow-narrow-right" width="24" height="24" className="ml-2" />
                             </Link>
                             <Link 
-                                href='#' 
+                                href='/documentation' 
                                 className='border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-10 rounded-full transition-all duration-300 inline-flex items-center justify-center'
                             >
                                 View Documentation

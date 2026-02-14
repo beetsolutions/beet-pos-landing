@@ -20,12 +20,15 @@ const ContactUsPage = () => {
         };
 
         try {
-            // Simulate API call - Replace with actual endpoint
+            // Simulate API call - Replace with actual endpoint when backend is ready
+            // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
             await new Promise(resolve => setTimeout(resolve, 1000));
+            console.log('Form data:', data); // Log for debugging
             toast.success("Thank you for contacting us! We'll get back to you soon.");
             (e.target as HTMLFormElement).reset();
         } catch (error) {
-            toast.error("Something went wrong. Please try again.");
+            console.error('Form submission error:', error);
+            toast.error("Unable to send your message. Please try again or contact us directly via email.");
         } finally {
             setIsSubmitting(false);
         }

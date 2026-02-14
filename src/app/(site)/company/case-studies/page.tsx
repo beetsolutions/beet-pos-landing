@@ -14,7 +14,7 @@ const CaseStudiesPage = () => {
             id: "family-diner",
             title: "Family Diner Increases Revenue by 45%",
             industry: "Restaurant",
-            image: "/images/hero/bakery.webp",
+            image: "/images/cook/cook.jpg",
             challenge: "A local family diner struggled with slow order processing during peak hours, leading to long wait times and frustrated customers.",
             solution: "Implemented BEET POS with kitchen display system and mobile ordering integration, streamlining operations across front and back of house.",
             results: [
@@ -42,7 +42,7 @@ const CaseStudiesPage = () => {
             id: "coffee-cafe",
             title: "Cafe Reduces Costs with Smart Inventory",
             industry: "Coffee Shop",
-            image: "/images/cook/cook.jpg",
+            image: "/images/hero/display.webp",
             challenge: "A busy coffee shop was experiencing significant product waste and difficulty tracking ingredient usage across menu items.",
             solution: "Integrated BEET POS inventory management with recipe costing and automated reorder alerts for optimal stock levels.",
             results: [
@@ -206,7 +206,7 @@ const CaseStudiesPage = () => {
                                 Get Started Today
                             </Link>
                             <Link 
-                                href='/company/contact-us' 
+                                href='/request-demo' 
                                 className='inline-flex border border-primary justify-center rounded-full text-lg font-medium items-center py-4 px-10 text-primary hover:text-white hover:bg-primary transition-colors'
                             >
                                 Schedule a Demo

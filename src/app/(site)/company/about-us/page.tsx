@@ -23,7 +23,7 @@ const AboutPage = () => {
                                 BEET POs’s highest priority is to help independent businesses flourish. Our vision is to build innovative solutions that help every business run better—today and into the future.
                             </p>
                             <div className='md:flex align-middle justify-center lg:justify-start'>
-                                <Link href='#' className='flex border w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-white hover:text-white hover:bg-primary'>Read Our Story</Link>
+                                <Link href='#' className='flex border w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 dark:bg-primary dark:hover:bg-white text-white dark:hover:text-gray-600 hover:text-white hover:bg-primary'>Read Our Story</Link>
                             </div>
                         </div>
                     </div>
@@ -39,8 +39,8 @@ const AboutPage = () => {
                                 About us
                             </h2>
 
-                            <p className='text-black/60 font-normal mt-4 mb-3 text-start'>
-                                BEET POS began as a free desktop program that business owners could download. At this stage, “BEETs Lounge” was a passion project that Sohail provided with the sole purpose of helping small businesses. As Modisoft grew and moved onto a server, clients were only charged the cost of the server to keep it running — Sohail did this to make efficient and accessible software available to everyone. Now, Modisoft is thriving and remains the most effective, complete and economically friendly option for back office functionality for businesses of all kinds and scales, from local mom-and-pops to well-established companies with over 100 locations. This broad network of businesses is a powerful benefit to family-owned stores and their home communities.
+                            <p className='text-black/60 font-normal mt-4 mb-3 text-start dark:text-white'>
+                                BEET POS began as a free desktop program that business owners could download. At this stage, “BEETs Lounge” was a passion project that Sohail provided with the sole purpose of helping small businesses. As BEET POS grew and moved onto a server, clients were only charged the cost of the server to keep it running — Sohail did this to make efficient and accessible software available to everyone. Now, Modisoft is thriving and remains the most effective, complete and economically friendly option for back office functionality for businesses of all kinds and scales, from local mom-and-pops to well-established companies with over 100 locations. This broad network of businesses is a powerful benefit to family-owned stores and their home communities.
                             </p>
                         </div>
 
@@ -62,7 +62,7 @@ const AboutPage = () => {
                                 Our Mission
                             </h2>
 
-                            <p className='text-black/60 font-normal mt-4 mb-3 text-start'>
+                            <p className='text-black/60 font-normal mt-4 mb-3 text-start dark:text-white'>
                                 At BEET POS, we build solutions that empowers businesses to operate smarter, adapt faster, and grow stronger. We’re committed to helping businesses thrive through strong partnerships and forward-thinking innovation.
                             </p>
                         </div>

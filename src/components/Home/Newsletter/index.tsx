@@ -5,12 +5,14 @@ import { Icon } from "@iconify/react";
 import toast from "react-hot-toast";
 import Loader from "@/components/Common/Loader";
 
+const MOCK_API_DELAY = 1500;
+
 const Newsletter = () => {
     const [email, setEmail] = useState("");
     const [loading, setLoading] = useState(false);
 
     const validateEmail = (email: string) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return emailRegex.test(email);
     };
 
@@ -31,7 +33,7 @@ const Newsletter = () => {
 
         try {
             // Simulate API call - replace with actual API endpoint when available
-            await new Promise((resolve) => setTimeout(resolve, 1500));
+            await new Promise((resolve) => setTimeout(resolve, MOCK_API_DELAY));
             
             toast.success("Thank you for subscribing to our newsletter!");
             setEmail("");

@@ -3,6 +3,7 @@ import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 import { ThemeProvider } from "next-themes";
 import ScrollToTop from "@/components/ScrollToTop";
+import ToasterContext from "./api/contex/ToasetContex";
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
           enableSystem={true}
           defaultTheme="system"
         >
+          <ToasterContext />
           <Header />
           {children}
           <Footer />

@@ -98,7 +98,7 @@ const CareersPage = () => {
                             </p>
                         </div>
                         <div className='col-span-6 flex justify-start'>
-                            <Image src="/images/hero/team.jpg" alt="BEET POS team" width={636} height={808} className="rounded-3xl" />
+                            <Image src="/images/hero/team.jpg" alt="BEET POS team members collaborating in the office" width={636} height={808} className="rounded-3xl" />
                         </div>
                     </div>
                 </div>

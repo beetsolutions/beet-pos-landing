@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Grocery Store POS System | BEET POS",
     description: "Complete grocery store POS system with inventory management, fresh produce tracking, and integrated scales. Streamline checkout and manage your grocery store efficiently.",
+    openGraph: {
+        title: "Grocery Store POS System - BEET POS",
+        description: "Complete grocery store POS with inventory management, fresh produce tracking, and integrated scales.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const GroceryPage = () => {

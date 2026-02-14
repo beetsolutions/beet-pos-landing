@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Smoke Shop POS System | BEET POS",
     description: "Specialized POS system for smoke shops. Manage inventory, ensure age compliance, and streamline operations with BEET POS.",
+    openGraph: {
+        title: "Smoke Shop POS System - BEET POS",
+        description: "Manage inventory, ensure age compliance, and streamline smoke shop operations.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const SmokeShopsPage = () => {

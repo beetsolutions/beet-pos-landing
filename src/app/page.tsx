@@ -9,7 +9,13 @@ import {FAQ} from "@/components/FAQ";
 import Empowerment from "@/components/Empowerment";
 
 export const metadata: Metadata = {
-    title: "BEET POS",
+    title: "Home",
+    description: "BEET POS is the modern point of sale system that transforms how you run your business. Powerful features, easy to use, transparent pricing. Perfect for restaurants, bars, cafes, and retail stores.",
+    openGraph: {
+        title: "BEET POS - Modern Point of Sale System",
+        description: "Transform your business with BEET POS. Modern, cloud-based POS system with powerful features and transparent pricing.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 export default function Home() {

@@ -1,7 +1,13 @@
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-    title: "Resources | Resources",
+    title: "Resources",
+    description: "Helpful resources, guides, and tools to get the most out of your BEET POS system. Access training materials, video tutorials, and best practices.",
+    openGraph: {
+        title: "Resources - BEET POS",
+        description: "Helpful resources, guides, and tools to get the most out of your BEET POS system.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 export default function Page() {

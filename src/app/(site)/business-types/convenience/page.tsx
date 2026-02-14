@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Convenience Store POS System | BEET POS",
     description: "Streamline your convenience store operations with BEET POS. Fast checkout, inventory management, and powerful reporting for convenience stores.",
+    openGraph: {
+        title: "Convenience Store POS System - BEET POS",
+        description: "Fast checkout, inventory management, and powerful reporting for convenience stores.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const ConveniencePage = () => {

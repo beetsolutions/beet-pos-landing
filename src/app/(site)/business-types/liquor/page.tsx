@@ -7,6 +7,11 @@ import Newsletter from "@/components/Home/Newsletter";
 export const metadata: Metadata = {
     title: "Liquor Store POS System | BEET POS",
     description: "Optimize your liquor store with BEET POS. Age verification, inventory management, compliance tracking, and powerful reporting for liquor stores.",
+    openGraph: {
+        title: "Liquor Store POS System - BEET POS",
+        description: "Age verification, inventory management, compliance tracking for liquor stores.",
+        images: ['/images/hero/beetpos.png'],
+    },
 };
 
 const LiquorPage = () => {

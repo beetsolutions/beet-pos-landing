@@ -1,16 +1,23 @@
 "use client"
 import Image from 'next/image';
 import React, {useState} from "react";
-import SocialSignUp from "@/components/Auth/SocialSignUp";
-import {signIn} from "next-auth/react";
+
+type BusinessType = 'smoke' | 'grocery' | 'liquor' | 'cafe';
 
 const POS = () => {
 
-    const [showConvenience, setShowConvenience] = useState(true);
-    const [showFastFood, setShowFastFood] = useState(true);
-    const [showLiquor, setShowLiquor] = useState(true);
-    const [showBar, setShowBar] = useState(true);
-    const [showSaloon, setShowSaloon] = useState(true);
+    const [selectedBusinessType, setSelectedBusinessType] = useState<BusinessType>('smoke');
+    
+    const businessImages: Record<BusinessType, string> = {
+        smoke: '/images/hero/smoke-ipad.webp',
+        grocery: '/images/hero/display.webp',
+        liquor: '/images/hero/kiosks.webp',
+        cafe: '/images/hero/bakery.webp'
+    };
+
+    const getButtonClassName = (type: BusinessType) => {
+        return `flex w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary text-white ${selectedBusinessType === type ? 'bg-primary' : 'bg-primary/50'}`;
+    };
 
     return (
         <section className='relative' id="cook-section">
@@ -30,8 +37,9 @@ const POS = () => {
 
                         <div className="flex gap-4 py-2">
                             <button
-                                onClick={() => signIn("github")}
-                                className="flex grid-cols-2 w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary bg-primary text-white"
+                                onClick={() => setSelectedBusinessType('smoke')}
+                                className={getButtonClassName('smoke')}
+                                aria-pressed={selectedBusinessType === 'smoke'}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
@@ -50,8 +58,9 @@ const POS = () => {
                             </button>
 
                             <button
-                                onClick={() => signIn("github")}
-                                className="flex w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary bg-primary/50 text-white"
+                                onClick={() => setSelectedBusinessType('grocery')}
+                                className={getButtonClassName('grocery')}
+                                aria-pressed={selectedBusinessType === 'grocery'}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
                                      fill="currentColor">
@@ -78,8 +87,9 @@ const POS = () => {
 
                         <div className="flex gap-4 py-2">
                             <button
-                                onClick={() => signIn("github")}
-                                className="flex  grid-cols-2 w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary bg-primary/50 text-white"
+                                onClick={() => setSelectedBusinessType('liquor')}
+                                className={getButtonClassName('liquor')}
+                                aria-pressed={selectedBusinessType === 'liquor'}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
@@ -107,8 +117,9 @@ const POS = () => {
                             </button>
 
                             <button
-                                onClick={() => signIn("github")}
-                                className="flex w-full items-center gap-2.5 rounded-lg p-3.5 hover:bg-primary bg-primary/50 text-white"
+                                onClick={() => setSelectedBusinessType('cafe')}
+                                className={getButtonClassName('cafe')}
+                                aria-pressed={selectedBusinessType === 'cafe'}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
@@ -129,7 +140,7 @@ const POS = () => {
                     </div>
 
                     <div className='col-span-6 flex justify-start'>
-                        <Image src="/images/hero/bakery.webp" alt="nothing" width={636} height={808}/>
+                        <Image src={businessImages[selectedBusinessType]} alt={`${selectedBusinessType} POS system`} width={636} height={808}/>
                     </div>
                 </div>
 

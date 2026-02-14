@@ -4,6 +4,7 @@ import Footer from "@/components/Layout/Footer";
 import { ThemeProvider } from "next-themes";
 import ScrollToTop from "@/components/ScrollToTop";
 import ToasterContext from "./api/contex/ToasetContex";
+import CookieConsent from "@/components/CookieConsent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
+          <CookieConsent />
         </ThemeProvider>
       </body>
     </html>

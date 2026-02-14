@@ -49,7 +49,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       {submenuOpen && (
           <div className="w-full">
             <div
-                className={`absolute py-2 left-0 mt-0.2 min-w-[580px] grid grid-cols-2 gap-4 max-w-screen-xl bg-white dark:bg-darklight dark:text-white shadow-lg rounded-lg `}
+                className={`absolute py-2 left-0 mt-0.2 min-w-[580px] grid grid-cols-2 gap-4 max-w-screen-xl bg-white dark:bg-gray-700 dark:text-white shadow-lg rounded-lg `}
                 data-aos="fade-up"
                 data-aos-duration="500"
             >
@@ -59,7 +59,7 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
                       href={subItem.href}
                       className={`block px-4 py-2   ${path === subItem.href
                           ? "bg-primary text-white"
-                          : "text-black dark:text-white hover:bg-primary"
+                          : "text-black dark:text-white hover:bg-primary hover:text-white"
                       }`}
                   >
                     {subItem.label}

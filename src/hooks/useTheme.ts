@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useTheme as useNextTheme } from 'next-themes';
 
 /**
@@ -13,14 +14,21 @@ import { useTheme as useNextTheme } from 'next-themes';
  */
 export function useTheme() {
   const { theme, setTheme, resolvedTheme, systemTheme } = useNextTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Wait for component to mount to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Return the resolved theme (which handles "system" theme correctly)
   // or fall back to the theme value if resolvedTheme is not available
-  const currentTheme = resolvedTheme || theme || 'light';
+  // During SSR/initial mount, default to 'light' to avoid hydration issues
+  const currentTheme = mounted ? (resolvedTheme || theme || 'light') : 'light';
 
   return {
     theme: currentTheme as 'light' | 'dark',
     setTheme,
-    systemTheme,
+    systemTheme: mounted ? systemTheme : undefined,
   };
 }

@@ -39,6 +39,7 @@ const POS = () => {
                             <button
                                 onClick={() => setSelectedBusinessType('smoke')}
                                 className={getButtonClassName('smoke')}
+                                aria-pressed={selectedBusinessType === 'smoke'}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
@@ -59,6 +60,7 @@ const POS = () => {
                             <button
                                 onClick={() => setSelectedBusinessType('grocery')}
                                 className={getButtonClassName('grocery')}
+                                aria-pressed={selectedBusinessType === 'grocery'}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
                                      fill="currentColor">
@@ -87,6 +89,7 @@ const POS = () => {
                             <button
                                 onClick={() => setSelectedBusinessType('liquor')}
                                 className={getButtonClassName('liquor')}
+                                aria-pressed={selectedBusinessType === 'liquor'}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"
@@ -116,6 +119,7 @@ const POS = () => {
                             <button
                                 onClick={() => setSelectedBusinessType('cafe')}
                                 className={getButtonClassName('cafe')}
+                                aria-pressed={selectedBusinessType === 'cafe'}
                             >
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23"

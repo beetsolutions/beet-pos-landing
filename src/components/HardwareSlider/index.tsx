@@ -70,8 +70,7 @@ const HardwareSlider = () => {
                                             alt={`${items.profession} product image`}
                                             width={636} 
                                             height={808}
-                                            loading={index === 0 ? "eager" : "lazy"}
-                                            priority={index === 0}
+                                            {...(index === 0 ? { priority: true } : { loading: "lazy" })}
                                         />
                                     </div>
                                 </div>
@@ -79,7 +78,9 @@ const HardwareSlider = () => {
                         ))}
                     </Slider>
                 ) : (
-                    <p className='text-center py-10'>No hardware data available</p>
+                    <div role="status" aria-live="polite" className='text-center py-10'>
+                        <p>No hardware data available</p>
+                    </div>
                 )}
             </div>
         </section>

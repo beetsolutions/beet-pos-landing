@@ -9,7 +9,7 @@ import HeaderLink from "../Header/Navigation/HeaderLink";
 import MobileHeaderLink from "../Header/Navigation/MobileHeaderLink";
 import Signin from "@/components/Auth/SignIn";
 import SignUp from "@/components/Auth/SignUp";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/hooks";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import LogoDark from "@/components/Layout/Header/LogoWhite";
 

@@ -1,14 +1,9 @@
 "use client"
-import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import Newsletter from "@/components/Home/Newsletter";
 import { Icon } from "@iconify/react";
-
-const metadata: Metadata = {
-    title: "Resources | BEET POS",
-};
 
 type ResourceCategory = "all" | "guides" | "case-studies" | "blog" | "videos";
 
@@ -124,6 +119,14 @@ const categories = [
     { id: "videos" as ResourceCategory, label: "Videos", icon: "solar:video-library-outline" },
 ];
 
+const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', { 
+        month: 'short', 
+        day: 'numeric', 
+        year: 'numeric' 
+    });
+};
+
 const ResourcesPage = () => {
     const [activeCategory, setActiveCategory] = useState<ResourceCategory>("all");
 
@@ -214,7 +217,7 @@ const ResourcesPage = () => {
                                     <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mb-3">
                                         <span className="flex items-center gap-1">
                                             <Icon icon="solar:calendar-outline" width="16" height="16" />
-                                            {new Date(resource.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                                            {formatDate(resource.date)}
                                         </span>
                                         {resource.readTime && (
                                             <>

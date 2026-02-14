@@ -25,7 +25,7 @@ const PricingPage = () => {
                             <div className="flex justify-center">
                                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-600/10 to-indigo-600/10 border border-violet-600/20 backdrop-blur-sm">
                                     <span className="text-sm font-medium bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
-                                        💎 Transparent Pricing
+                                        <span aria-hidden="true">💎</span> Transparent Pricing
                                     </span>
                                 </div>
                             </div>

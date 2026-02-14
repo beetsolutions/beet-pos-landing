@@ -97,7 +97,7 @@ export function PricingSection() {
               <div className="flex flex-col items-center gap-4 mb-12 mt-2">
                 <div className="flex flex-col items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-violet-600/10 to-blue-600/10 border border-violet-600/20 shadow-lg shadow-violet-600/5 backdrop-blur-sm">
               <span className="text-sm font-medium bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">
-                🏪 For Retailers
+                <span aria-hidden="true">🏪</span> For Retailers
               </span>
                 </div>
                 <p className="text-base text-gray-600 dark:text-gray-400 hover:text-violet-600 transition-colors duration-300 font-medium">
@@ -191,7 +191,7 @@ export function PricingSection() {
               <div className="flex flex-col items-center gap-4 mb-12 mt-2">
                 <div className="flex flex-col items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-pink-600/10 to-rose-600/10 border border-pink-600/20 shadow-lg shadow-pink-600/5 backdrop-blur-sm">
               <span className="text-sm font-medium bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
-                🍽️ For Restaurants
+                <span aria-hidden="true">🍽️</span> For Restaurants
               </span>
                 </div>
                 <p className="text-base text-gray-600 dark:text-gray-400 hover:text-pink-600 transition-colors duration-300 font-medium">

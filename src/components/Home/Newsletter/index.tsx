@@ -6,14 +6,14 @@ import toast from "react-hot-toast";
 import Loader from "@/components/Common/Loader";
 
 const MOCK_API_DELAY = 1500;
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const Newsletter = () => {
     const [email, setEmail] = useState("");
     const [loading, setLoading] = useState(false);
 
     const validateEmail = (email: string) => {
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        return emailRegex.test(email);
+        return EMAIL_REGEX.test(email);
     };
 
     const handleSubmit = async (e: React.FormEvent) => {

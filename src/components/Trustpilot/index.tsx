@@ -32,11 +32,16 @@ const Trustpilot = ({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Load Trustpilot widget script
-    if (typeof window !== "undefined" && window.Trustpilot) {
+    // Load Trustpilot widget script only if businessUnitId is available
+    if (typeof window !== "undefined" && window.Trustpilot && businessUnitId) {
       window.Trustpilot.loadFromElement(ref.current, true);
     }
-  }, []);
+  }, [businessUnitId]);
+
+  // Don't render if no businessUnitId is provided
+  if (!businessUnitId) {
+    return null;
+  }
 
   return (
     <div
@@ -50,15 +55,13 @@ const Trustpilot = ({
       data-theme={theme}
       data-stars={stars}
     >
-      {businessUnitId ? (
-        <a
-          href={`https://www.trustpilot.com/review/beetpos.com`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Trustpilot
-        </a>
-      ) : null}
+      <a
+        href={`https://www.trustpilot.com/review/beetpos.com`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Trustpilot
+      </a>
     </div>
   );
 };

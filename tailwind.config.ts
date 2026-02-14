@@ -23,6 +23,9 @@ const config: Config = {
       borderRadius: {
         "Newsletter": "30px 400px 30px 30px"
       },
+      fontFamily: {
+        poppins: ['Poppins', 'system-ui', 'sans-serif'],
+      },
     },
   },
   plugins: [],

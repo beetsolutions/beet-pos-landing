@@ -169,8 +169,8 @@ const CaseStudiesPage = () => {
                                             Key Results:
                                         </p>
                                         <ul className='space-y-1'>
-                                            {study.results.map((result) => (
-                                                <li key={result} className='text-sm text-black/60 dark:text-white/60 flex items-start'>
+                                            {study.results.map((result, idx) => (
+                                                <li key={`${study.id}-result-${idx}`} className='text-sm text-black/60 dark:text-white/60 flex items-start'>
                                                     <span className='text-primary mr-2'>✓</span>
                                                     {result}
                                                 </li>

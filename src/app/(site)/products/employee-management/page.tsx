@@ -152,7 +152,7 @@ const ProductsPage = () => {
                             <div className="flex lg:justify-start justify-center mb-6">
                                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600/10 to-blue-600/10 border border-green-600/20 backdrop-blur-sm">
                                     <span className="text-sm font-medium bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-                                        <span role="img" aria-label="People">👥</span> Employee Management
+                                        <span aria-hidden="true">👥</span> Employee Management
                                     </span>
                                 </div>
                             </div>
@@ -199,10 +199,8 @@ const ProductsPage = () => {
                                 key={i}
                                 className="p-8 rounded-3xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                             >
-                                <div className="text-4xl mb-4">
-                                    <span role="img" aria-label={feature.iconLabel}>
-                                        {feature.icon}
-                                    </span>
+                                <div className="text-4xl mb-4" aria-hidden="true">
+                                    {feature.icon}
                                 </div>
                                 <h3 className="text-xl text-black dark:text-white font-semibold mb-3">
                                     {feature.title}

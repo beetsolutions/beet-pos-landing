@@ -30,8 +30,8 @@ const ProductsPage = () => {
                                 For busy hosts, every second counts. BEET Tables helps keep your front of house running smoothly with direct BEET POS integration and automated server rotation designed to keep tables turning and guests happy.
                             </p>
                             <div className='md:flex align-middle justify-center lg:justify-start gap-4'>
-                                <Link href='#features-section' className='text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 bg-primary hover:text-primary lg:px-14 border border-primary hover:bg-transparent transition-colors duration-300'>Get a Demo</Link>
-                                <Link href='#pricing-section' className='flex border w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-primary hover:text-white hover:bg-primary transition-colors duration-300'>See Pricing</Link>
+                                <Link href='/request-demo' className='text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 bg-primary hover:text-primary lg:px-14 border border-primary hover:bg-transparent transition-colors duration-300'>Get a Demo</Link>
+                                <Link href='/pricing' className='flex border w-full md:w-auto mt-5 md:mt-0 border-primary justify-center rounded-full text-xl font-medium items-center py-5 px-10 text-primary hover:text-white hover:bg-primary transition-colors duration-300'>See Pricing</Link>
                             </div>
                         </div>
                         <div className='col-span-6 flex justify-center relative'>
@@ -187,7 +187,7 @@ const ProductsPage = () => {
                                     <div>
                                         <h3 className='text-xl font-semibold mb-2 text-black dark:text-white'>Increase Revenue</h3>
                                         <p className='text-black/60 dark:text-white/60'>
-                                            Optimize your seating, reduce wait times, and fill more tables. Our customers see an average 20% increase in covers.
+                                            Optimize your seating, reduce wait times, and fill more tables. Better table management leads to increased revenue.
                                         </p>
                                     </div>
                                 </div>
@@ -257,10 +257,10 @@ const ProductsPage = () => {
                             Join thousands of restaurants using BEET Tables to manage reservations, reduce no-shows, and deliver exceptional guest experiences.
                         </p>
                         <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-                            <Link href='#contact' className='text-xl w-full sm:w-auto font-medium rounded-full text-primary py-5 px-14 bg-white hover:bg-gray-100 transition-colors duration-300'>
+                            <Link href='/request-demo' className='text-xl w-full sm:w-auto font-medium rounded-full text-primary py-5 px-14 bg-white hover:bg-gray-100 transition-colors duration-300'>
                                 Schedule a Demo
                             </Link>
-                            <Link href='#contact' className='text-xl w-full sm:w-auto font-medium rounded-full text-white py-5 px-14 border-2 border-white hover:bg-white hover:text-primary transition-colors duration-300'>
+                            <Link href='/company/contact-us' className='text-xl w-full sm:w-auto font-medium rounded-full text-white py-5 px-14 border-2 border-white hover:bg-white hover:text-primary transition-colors duration-300'>
                                 Contact Sales
                             </Link>
                         </div>

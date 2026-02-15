@@ -1,4 +1,3 @@
-"use client"
 import {Metadata} from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,35 +6,51 @@ import { cn } from "@/lib/utils";
 import HardwareSlider from "@/components/HardwareSlider";
 import { FAQ } from "@/components/FAQ";
 
+export const metadata: Metadata = {
+    title: "Point of Sale",
+    description: "Revolutionize your restaurant with BEET POS. Our modern point of sale system streamlines operations, enhances customer experience, and improves your bottom line.",
+    openGraph: {
+        title: "Point of Sale - BEET POS",
+        description: "Modern point of sale system designed to streamline your restaurant operations and enhance customer experience.",
+        images: ['/images/hero/beetpos.png'],
+    },
+};
+
 // Core POS Features
 const posFeatures = [
   {
     icon: "🍽️",
+    iconLabel: "Plate and utensils",
     title: "Fast Order Processing",
     description: "Lightning-fast order entry with intuitive menu layouts. Take orders in seconds, not minutes.",
   },
   {
     icon: "💳",
+    iconLabel: "Credit card",
     title: "Flexible Payments",
     description: "Accept all payment types: cash, credit, debit, mobile wallets, and contactless payments.",
   },
   {
     icon: "👨‍💼",
+    iconLabel: "Business person",
     title: "Employee Management",
     description: "Track time, manage schedules, control permissions, and monitor performance effortlessly.",
   },
   {
     icon: "📊",
+    iconLabel: "Bar chart",
     title: "Real-Time Analytics",
     description: "Get instant insights into sales, inventory, and customer trends with live reporting.",
   },
   {
     icon: "🔄",
+    iconLabel: "Refresh arrows",
     title: "Inventory Control",
     description: "Automatic inventory tracking with low-stock alerts and smart reordering capabilities.",
   },
   {
     icon: "☁️",
+    iconLabel: "Cloud",
     title: "Cloud-Based",
     description: "Access your data from anywhere, anytime. Automatic backups ensure you never lose data.",
   },
@@ -137,7 +152,7 @@ const ProductsPage = () => {
                             <div className="flex lg:justify-start justify-center mb-6">
                                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/10 to-blue-600/10 border border-purple-600/20 backdrop-blur-sm">
                                     <span className="text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                                        <span aria-hidden="true">🍽️</span> <span className="sr-only">Category:</span>Restaurant Point of Sale
+                                        <span role="img" aria-label="Plate and utensils">🍽️</span> Restaurant Point of Sale
                                     </span>
                                 </div>
                             </div>
@@ -184,8 +199,10 @@ const ProductsPage = () => {
                                 key={i}
                                 className="p-8 rounded-3xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                             >
-                                <div className="text-4xl mb-4" role="img" aria-label={feature.title}>
-                                    {feature.icon}
+                                <div className="text-4xl mb-4">
+                                    <span role="img" aria-label={feature.iconLabel}>
+                                        {feature.icon}
+                                    </span>
                                 </div>
                                 <h3 className="text-xl text-black dark:text-white font-semibold mb-3">
                                     {feature.title}

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import {companyData, headerData} from "../Header/Navigation/menuData";
+import {companyData, headerData, productData} from "../Header/Navigation/menuData";
 import { Icon } from "@iconify/react";
 import LogoDark from "../Header/Logo";
 import Trustpilot from "@/components/Trustpilot";
@@ -128,83 +128,23 @@ const Footer: FC = () => {
               </li>
             </ul>
           </div>
+
           <div className="">
             <h4 className="text-white dark:text-white mb-9 font-semibold text-xl">Products</h4>
             <ul>
-              <li className="pb-5">
-                <Link
-                  href="#"
-                  className="text-white/70 dark:text-white/70 dark:hover:text-primary hover:text-primary text-base"
-                >
-                  Retail POS
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                  href="#"
-                  className="text-white/70 dark:text-white/70 dark:hover:text-primary hover:text-primary text-base"
-                >
-                  Restaurant POS
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                    href="#"
-                    className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
-                >
-                  Multi Location Management
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                  href="#"
-                  className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
-                >
-                  Inventory Management
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                  href="#"
-                  className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
-                >
-                  Employee Management
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                  href="#"
-                  className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
-                >
-                  Table Management
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                    href="#"
-                    className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
-                >
-                  Waitlist Management
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                    href="#"
-                    className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
-                >
-                  Order Management
-                </Link>
-              </li>
-              <li className="pb-5">
-                <Link
-                    href="#"
-                    className="text-white/70 dark:text-white/70 hover:text-primary dark:hover:text-primary text-base"
-                >
-                  Kitchen Display System
-                </Link>
-              </li>
+              {productData.map((item, index) => (
+                  <li key={index} className="pb-4">
+                    <Link
+                        href={item.href}
+                        className="text-white/70 dark:text-white/70 dark:hover:text-primary hover:text-primary text-base"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+              ))}
             </ul>
           </div>
+
           <div className="">
             <h4 className="text-white dark:text-white mb-9 font-semibold text-xl">Company</h4>
             <ul>

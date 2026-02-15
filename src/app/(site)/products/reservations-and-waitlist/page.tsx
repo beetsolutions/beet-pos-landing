@@ -151,7 +151,7 @@ const ProductsPage = () => {
                                     <div>
                                         <h3 className='text-xl font-semibold mb-2 text-black dark:text-white'>Reduce No-Shows</h3>
                                         <p className='text-black/60 dark:text-white/60'>
-                                            Automated reminders and confirmations help reduce no-shows by up to 40%, keeping your tables full and revenue flowing.
+                                            Automated reminders and confirmations help significantly reduce no-shows, keeping your tables full and revenue flowing.
                                         </p>
                                     </div>
                                 </div>
@@ -254,7 +254,7 @@ const ProductsPage = () => {
                             Ready to optimize your restaurant operations?
                         </h2>
                         <p className='text-white/90 text-lg mb-10 max-w-2xl mx-auto'>
-                            Join thousands of restaurants using BEET Tables to manage reservations, reduce no-shows, and deliver exceptional guest experiences.
+                            Join restaurants worldwide using BEET Tables to manage reservations, reduce no-shows, and deliver exceptional guest experiences.
                         </p>
                         <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
                             <Link href='/request-demo' className='text-xl w-full sm:w-auto font-medium rounded-full text-primary py-5 px-14 bg-white hover:bg-gray-100 transition-colors duration-300'>

@@ -61,7 +61,7 @@ const detailedFeatures = [
   {
     title: "Tableside Ordering Made Simple",
     description: "Empower your servers to deliver exceptional service. With BEET POS handheld devices, your staff can focus on customers instead of running back and forth to a terminal. Take orders, split checks, and process payments—all from the palm of their hand.",
-    image: "/images/hero/beetpos.png",
+    image: "/images/hero/handheld.avif",
     features: [
       "Intuitive touch interface for fast order entry",
       "Visual menu with item photos and descriptions",
@@ -85,7 +85,7 @@ const detailedFeatures = [
   {
     title: "Flexible Payment Processing",
     description: "Give customers the convenience of paying right at their table. Speed up table turns and improve satisfaction with secure, fast payment processing that supports all major payment methods.",
-    image: "/images/hero/beetpos.png",
+    image: "/images/hero/payments.webp",
     features: [
       "EMV chip and contactless payments",
       "Apple Pay, Google Pay, Samsung Pay",
@@ -176,7 +176,7 @@ const ProductsPage = () => {
                             </div>
                         </div>
                         <div className='col-span-6 flex justify-center relative'>
-                            <Image src="/images/hero/banner-image.png" alt="BEET POS Handheld Device" width={1000} height={805} className="w-full h-auto" />
+                            <Image src="/images/hero/handheld.avif" alt="BEET POS Handheld Device" width={1000} height={805} className="w-full h-auto" />
                         </div>
                     </div>
                 </div>

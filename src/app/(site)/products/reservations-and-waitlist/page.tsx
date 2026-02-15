@@ -20,10 +20,10 @@ const ProductsPage = () => {
                 <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-20 pb-16">
                     <div className='grid grid-cols-1 lg:grid-cols-12 items-center gap-8'>
                         <div className='col-span-6'>
-                            <h1 className="text-1xl lg:text-3xl font-light mb-5 text-black dark:text-white md:4px lg:text-start text-center">
+                            <h1 className="text-1xl lg:text-3xl font-light mb-5 text-black dark:text-white lg:text-start text-center">
                                 Reservations and Waitlist
                             </h1>
-                            <h1 className="text-2xl lg:text-5xl font-semibold mb-5 text-black dark:text-white md:4px lg:text-start text-center">
+                            <h1 className="text-2xl lg:text-5xl font-semibold mb-5 text-black dark:text-white lg:text-start text-center">
                                 A smarter way to manage your waitlist and tables
                             </h1>
                             <p className='text-black/55 dark:text-white/50 lg:text-lg font-normal mb-10 lg:text-start text-center'>

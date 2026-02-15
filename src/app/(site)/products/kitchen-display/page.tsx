@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const kdsFeatures = [
   {
     icon: "📱",
-    iconLabel: "Mobile device",
+    iconLabel: "Kitchen screen",
     title: "Real-Time Order Display",
     description: "Orders appear instantly on kitchen screens as they're placed. No delays, no paper tickets, no confusion.",
   },
@@ -151,8 +151,9 @@ const ProductsPage = () => {
                             {/* Badge */}
                             <div className="flex lg:justify-start justify-center mb-6">
                                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-600/10 to-red-600/10 border border-orange-600/20 backdrop-blur-sm">
-                                    <span className="text-sm font-medium bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                                        <span role="img" aria-label="Chef hat">👨‍🍳</span> Kitchen Display System
+                                    <span role="img" aria-label="Chef hat">👨‍🍳</span>
+                                    <span className="text-sm font-medium bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent ml-2">
+                                        Kitchen Display System
                                     </span>
                                 </div>
                             </div>

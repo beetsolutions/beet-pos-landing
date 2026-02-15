@@ -142,16 +142,16 @@ const ProductsPage = () => {
                 <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-20 pb-16">
                     <div className='grid grid-cols-1 lg:grid-cols-12 items-center gap-8'>
                         <div className='col-span-6'>
-                            <h1 className="text-1xl lg:text-3xl font-light mb-5 text-black dark:text-white lg:text-start text-center">
+                            <p className="text-xl lg:text-3xl font-light mb-5 text-black dark:text-white lg:text-start text-center">
                                 Email Marketing
-                            </h1>
+                            </p>
                             <h1 className="text-2xl lg:text-5xl font-semibold mb-5 text-black dark:text-white lg:text-start text-center">
                                 Email marketing tools built for restaurants, nightclubs, bars
                             </h1>
                             <p className='text-black/55 dark:text-white/50 lg:text-lg font-normal mb-10 lg:text-start text-center'>
                                 Generate up to £2,800 in sales per campaign with email marketing.* Turn first-time guests into regulars with automated, personalized campaigns that drive repeat visits and boost revenue.
                             </p>
-                            <div className='md:flex align-middle justify-center lg:justify-start gap-4'>
+                            <div className='md:flex items-center justify-center lg:justify-start gap-4'>
                                 <Link href='/request-demo' className='text-xl w-full md:w-auto font-medium rounded-full text-white py-5 px-6 bg-primary hover:text-primary lg:px-14 border border-primary hover:bg-transparent transition-colors duration-300'>
                                     Get a Demo
                                 </Link>
@@ -366,7 +366,9 @@ const ProductsPage = () => {
 
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         <div className='bg-white dark:bg-gray-800 p-8 rounded-2xl'>
-                            <div className='text-4xl mb-4'>🎂</div>
+                            <div className='text-4xl mb-4'>
+                                <span role="img" aria-label="Birthday cake">🎂</span>
+                            </div>
                             <h3 className='text-xl font-semibold mb-3 text-black dark:text-white'>Birthday Campaigns</h3>
                             <p className='text-black/60 dark:text-white/60'>
                                 Automatically send birthday offers to customers. Create memorable experiences that drive visits during celebration times.
@@ -374,7 +376,9 @@ const ProductsPage = () => {
                         </div>
 
                         <div className='bg-white dark:bg-gray-800 p-8 rounded-2xl'>
-                            <div className='text-4xl mb-4'>🍽️</div>
+                            <div className='text-4xl mb-4'>
+                                <span role="img" aria-label="Fork and knife">🍽️</span>
+                            </div>
                             <h3 className='text-xl font-semibold mb-3 text-black dark:text-white'>New Menu Announcements</h3>
                             <p className='text-black/60 dark:text-white/60'>
                                 Showcase new dishes and seasonal specials. Generate excitement and drive traffic with mouthwatering menu promotions.
@@ -382,7 +386,9 @@ const ProductsPage = () => {
                         </div>
 
                         <div className='bg-white dark:bg-gray-800 p-8 rounded-2xl'>
-                            <div className='text-4xl mb-4'>💝</div>
+                            <div className='text-4xl mb-4'>
+                                <span role="img" aria-label="Gift heart">💝</span>
+                            </div>
                             <h3 className='text-xl font-semibold mb-3 text-black dark:text-white'>Win-Back Campaigns</h3>
                             <p className='text-black/60 dark:text-white/60'>
                                 Re-engage customers who haven't visited recently. Personalized offers bring guests back through your doors.
@@ -390,7 +396,9 @@ const ProductsPage = () => {
                         </div>
 
                         <div className='bg-white dark:bg-gray-800 p-8 rounded-2xl'>
-                            <div className='text-4xl mb-4'>⏰</div>
+                            <div className='text-4xl mb-4'>
+                                <span role="img" aria-label="Clock">⏰</span>
+                            </div>
                             <h3 className='text-xl font-semibold mb-3 text-black dark:text-white'>Off-Peak Promotions</h3>
                             <p className='text-black/60 dark:text-white/60'>
                                 Fill tables during slow periods with targeted promotions. Drive traffic when you need it most.
@@ -398,7 +406,9 @@ const ProductsPage = () => {
                         </div>
 
                         <div className='bg-white dark:bg-gray-800 p-8 rounded-2xl'>
-                            <div className='text-4xl mb-4'>🎉</div>
+                            <div className='text-4xl mb-4'>
+                                <span role="img" aria-label="Party popper">🎉</span>
+                            </div>
                             <h3 className='text-xl font-semibold mb-3 text-black dark:text-white'>Event Invitations</h3>
                             <p className='text-black/60 dark:text-white/60'>
                                 Promote special events, live music, and private dining experiences directly to interested customers.
@@ -406,7 +416,9 @@ const ProductsPage = () => {
                         </div>
 
                         <div className='bg-white dark:bg-gray-800 p-8 rounded-2xl'>
-                            <div className='text-4xl mb-4'>⭐</div>
+                            <div className='text-4xl mb-4'>
+                                <span role="img" aria-label="Star">⭐</span>
+                            </div>
                             <h3 className='text-xl font-semibold mb-3 text-black dark:text-white'>VIP Programs</h3>
                             <p className='text-black/60 dark:text-white/60'>
                                 Reward your best customers with exclusive offers and early access to new menu items or events.

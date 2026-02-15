@@ -62,6 +62,7 @@ const detailedFeatures = [
     title: "Sell More Gift Cards, More Easily",
     description: "Make gift card sales effortless with multiple purchase options. Customers can buy gift cards online, in-store, or via mobile. Digital cards are delivered instantly via email, while physical cards can be beautifully designed to match your brand.",
     image: "/images/hero/gift-card.avif",
+    imageAlt: "Gift card purchase interface showing digital and physical card options with customizable designs",
     features: [
       "Online gift card purchases",
       "In-store physical card sales",
@@ -74,6 +75,7 @@ const detailedFeatures = [
     title: "Drive New Customer Acquisition",
     description: "Gift cards are powerful marketing tools. Every gift card sold brings new customers through your doors. Recipients spend an average of 38% more than the card value, making gift cards a revenue-driving powerhouse.",
     image: "/images/hero/beetpos.png",
+    imageAlt: "BEET POS dashboard showing gift card sales analytics and customer acquisition metrics",
     features: [
       "Turn gift recipients into regular customers",
       "Recipients typically spend above card value",
@@ -86,6 +88,7 @@ const detailedFeatures = [
     title: "Effortless Management & Tracking",
     description: "Manage all gift card operations from one centralized dashboard. Track sales, monitor balances in real-time, handle reloads, and generate detailed reports. Everything you need to run a successful gift card program.",
     image: "/images/hero/hq.webp",
+    imageAlt: "Gift card management dashboard displaying real-time balances, sales reports, and tracking features",
     features: [
       "Real-time balance checking",
       "Gift card reload capabilities",
@@ -98,6 +101,7 @@ const detailedFeatures = [
     title: "Boost Revenue Year-Round",
     description: "Gift cards provide consistent revenue throughout the year. They create cash flow upfront and bring customers back repeatedly. Plus, a percentage of gift cards go unredeemed, directly benefiting your bottom line.",
     image: "/images/hero/payments.webp",
+    imageAlt: "Payment processing interface showing gift card transactions and revenue analytics",
     features: [
       "Immediate cash flow from card sales",
       "Increased customer lifetime value",
@@ -152,7 +156,10 @@ const ProductsPage = () => {
                             <div className="flex lg:justify-start justify-center mb-6">
                                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/10 to-blue-600/10 border border-purple-600/20 backdrop-blur-sm">
                                     <span className="text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                                        <span role="img" aria-label="Gift">🎁</span> Restaurant Gift Cards
+                                        <span role="img" aria-label="Gift">🎁</span>
+                                    </span>
+                                    <span className="text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent ml-2">
+                                        Restaurant Gift Cards
                                     </span>
                                 </div>
                             </div>
@@ -176,7 +183,7 @@ const ProductsPage = () => {
                             </div>
                         </div>
                         <div className='col-span-6 flex justify-center relative'>
-                            <Image src="/images/hero/gift-card.avif" alt="BEET POS Gift Card System" width={1000} height={805} className="w-full h-auto" />
+                            <Image src="/images/hero/gift-card.avif" alt="Digital and physical gift cards displayed with custom branding and design options" width={1000} height={805} className="w-full h-auto" />
                         </div>
                     </div>
                 </div>
@@ -242,7 +249,7 @@ const ProductsPage = () => {
                                         <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-blue-600/10 rounded-3xl blur-2xl"></div>
                                         <Image
                                             src={feature.image}
-                                            alt={feature.title}
+                                            alt={feature.imageAlt}
                                             width={600}
                                             height={400}
                                             className="relative w-full h-auto rounded-3xl shadow-xl"
